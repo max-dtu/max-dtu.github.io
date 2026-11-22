@@ -308,7 +308,46 @@
                                     <details>
                                         <summary>02452 Machine Learning</summary>
                                         <ul>
-                                            
+                                            <section>
+                                                  <h3>Data in Machine Learning</h3>
+                                                  
+                                                  <p>The most important thing to know in Data Science and Machine Learning is that <strong>data is a matrix</strong>, and every row is a point in space.</p>
+                                                
+                                                  <ul>
+                                                    <li><code>(x, y, z)</code> is a row—also called an <strong>example</strong> or an <strong>entry</strong>.</li>
+                                                    <li>If your dataset is small, it can fit into a single matrix. Otherwise, you divide it into several matrices (batches).</li>
+                                                    <li>Entries can have more than 3 dimensions.</li>
+                                                  </ul>
+                                                
+                                                  <p>For example, the following entry has <strong>10 dimensions</strong> (also called <strong>features</strong>):</p>
+                                                  <pre><code>[temperature, humidity, pressure, wind_speed, rainfall, cloud_cover, visibility, UV_index, altitude, season]</code></pre>
+                                                
+                                                  <h4>Feature Matrix (<code>X</code>) and Labels (<code>y</code>)</h4>
+                                                  <p>In code, datasets are typically split into two aligned structures: a feature matrix (<code>X</code>) and a label vector (<code>y</code>).</p>
+                                                
+                                                  <pre><code>X = [
+                                                    [5.1, 3.5, 1.4, 0.2],
+                                                    [4.9, 3.0, 1.4, 0.2],
+                                                    [4.7, 3.2, 1.3, 0.2],
+                                                    ...
+                                                ]
+                                                
+                                                y = [
+                                                    "setosa",
+                                                    "setosa",
+                                                    "setosa",
+                                                    "versicolor",
+                                                    ...
+                                                ]</code></pre>
+                                                
+                                                
+                                                  <h4>Why Do We Separate Them?</h4>
+                                                  <p>When you train a model using a standard function like:</p>
+                                                  <pre><code>model.fit(X, y)</code></pre> you provide all the input data <code>X</code> and all the corresponding output data <code>y</code>.
+                                                
+                                                <p><strong>Note:</strong> <code>X</code> and <code>y</code> must maintain the exact same ordering. If you shuffle <code>X</code>, you must shuffle <code>y</code> in the exact same way—otherwise, the labels won't match their corresponding entries.</p>
+                                                
+                                        </section>
                                             <li><a href="https://www.youtube.com/watch?v=E0Hmnixke2g">All Machine Learning algorithms explained in 17 min</a></li>
                                             <li><a href="https://www.youtube.com/watch?v=uyF7q550XlA">Bayes’ Theorem for Beginners</a></li>
                                             <li><a href="https://www.youtube.com/watch?v=Kstjz91Ks4U">Naive Bayes - Explained</a></li>
